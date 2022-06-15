@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/styles/tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <title>Travels</title>
+</head>
+
+<body class="font-montserrat dark:bg-gray-900">
+  <nav class="hidden w-full h-14 p-4 bg-white lg:flex justify-between fixed z-10 dark:bg-gray-800">
+    <section class="h-auto w-auto ml-10">
+      <p class="text-xl text-primary font-black dark:text-white">Travels</p>
+    </section>
+    <section class="flex space-x-8 text-primary text-md font-bold dark:text-white">
+      <a href="#recommended">Locations</a>
+      <a href="#outstanding">Stays</a>
+      <a href="#faqs">FAQS</a>
+      <a href="#about-us">About Us</a>
+    </section>
+    <figure class="flex space-x-4 items-center mr-10">
+      <img class="h-5 w-5" src="/public/assets/icons/search.png" alt="">
+      <img id="toggle" class="h-5 w-5 cursor-pointer" src="/public/assets/icons/moon.svg" alt="">
+      <img class="h-5 w-5" src="/public/assets/icons/user.png" alt="">
+    </figure>
+  </nav>
+  <main class="w-full h-screen">
+    <section class="w-full h-3/4" id="home">
+      <div class="w-full h-full">
+        <div
+          class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start">
+          <input
+            class="outline-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden"
+            placeholder="San Fransisco" type="search" name="" id="">
+          <div class="hidden h-auto lg:w-2/5 lg:flex lg:pb-6">
+            <p class="text-4xl ml-16 font-bold">Find More Locations like this</p>
+          </div>
+          <button
+            class="w-48 text-lg text-primary font-semibold p-4 rounded-full shadow-sm bg-white transition transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16 dark:text-gray-900">Browse</button>
+        </div>
+        <div class="w-full h-full lg:h-full  lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+          <img class="lg:hidden" src="/public/assets/img/sanFrancisco.jpg" alt="San Francisco">
+        </div>
+      </div>
+    </section>
+    <section id="recommended" class="w-full h-auto">
+      <p class="p-6 text-3xl font-semibold text-primary dark:text-gray-100">Our Recommended</p>
+      <div
+        class="w-auto h-72 items-center mt-6 p-6 overflow-x-auto overscroll-x-contain flex space-x-6 overflow-y-hidden">
+        <article class="Card">
+          <div class="Card--img bg-norway"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg dark:bg-gray-700">
+            <div class="px-4 py-2">
+              <p class="text-white font-bold text-xl">Norway</p>
+              <p class="text-white text-md">Beautiful landscape</p>
+            </div>
+          </div>
+        </article>
+        <article class="Card">
+          <div class="Card--img bg-newYork"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg dark:bg-gray-800">
+            <div class="px-4 py-2">
+              <p class="text-tertiary font-bold text-xl dark:text-white">New York</p>
+              <p class="text-tertiary text-md dark:text-white">Concrete jungle</p>
+            </div>
+          </div>
+        </article>
+        <article class="Card">
+          <div class="Card--img bg-yosemite"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg dark:bg-gray-700">
+            <div class="px-4 py-2">
+              <p class="text-white font-bold text-xl">Yosemite</p>
+              <p class="text-white text-md">A break from the world</p>
+            </div>
+          </div>
+        </article>
+        <article class="Card">
+          <div class="Card--img bg-seattle"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg dark:bg-gray-800">
+            <div class="px-4 py-2">
+              <p class="text-tertiary font-bold text-xl dark:text-white">Seattle</p>
+              <p class="text-tertiary text-md dark:text-white">Big City</p>
+            </div>
+          </div>
+        </article>
+        <article class="Card">
+          <div class="Card--img bg-sydney bg-center"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg dark:bg-gray-700">
+            <div class="px-4 py-2">
+              <p class="text-white font-bold text-xl">Sydney</p>
+              <p class="text-white text-md">This is a city that's constantly evolving</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="w-full h-auto px-2 lg:px-6" id="outstanding">
+      <p class="text-3xl text-primary font-semibold pb-6 mt-6 dark:text-gray-100">Trending Stays</p>
+      <div class="w-full h-full flex flex-col items-center justify-center ">
+        <article class="w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center">
+          <p class="Card--title lg:text-black">Chicago</p>
+          <p class=" text-sm pl-8 text-black mr-24 lg:text-lg">2 rooms, bathroom and kitchen.</p>
+        </article>
+        <div class="lg:w-full lg:flex lg:h-full lg:space-x-4 md:w-full">
+          <article class="w-full h-96 bg-miami bg-cover rounded-xl mb-8 lg:h-auto">
+            <p class="Card--title">Miami</p>
+            <p class=" text-sm pl-8 text-black mr-24 lg:text-lg">3 rooms, 2 bathrooms, kitchen and amazing
+              sea view.</p>
+          </article>
+          <div class="lg:w-full lg:h-full ">
+            <article class="w-full h-96 bg-losAngeles bg-cover rounded-xl mb-8">
+              <p class="Card--title">Los Angeles</p>
+              <p class=" text-sm pl-8 text-white mr-24 lg:text-lg">4 rooms, 3 bathrooms, kitchen and private pool.</p>
+            </article>
+            <article class="w-full h-96 bg-bali bg-cover rounded-xl mb-8">
+              <p class="Card--title">Bali</p>
+              <p class=" text-sm pl-8 text-white mr-24 lg:text-lg">2 rooms, 2 bathrooms, kitchen and private
+                pool.</p>
+            </article>
+          </div>
+
+        </div>
+    </section>
+    <section class="w-full h-auto my-16" id="faqs">
+      <div class="w-full h-full px-6 ">
+        <p class="text-3xl text-primary font-semibold dark:text-gray-100">FAQs</p>
+        <article class="flex flex-col space-y-4 mt-11">
+          <p class="text-xl font-medium text-primary dark:text-gray-100">Payment Methods</p>
+          <p class="text-md dark:text-gray-200">We accept VISA, MasterCard, American Express, Paypal and Binance</p>
+          <p class="text-xl font-medium text-primary dark:text-gray-100">Cancellation Policy</p>
+          <p class="text-md dark:text-gray-200">We accept VISA, MasterCard, American Express, Paypal and Binance</p>
+          <p class="text-xl font-medium text-primary dark:text-gray-100">Long Stays</p>
+          <p class="text-md dark:text-gray-200">We accept VISA, MasterCard, American Express, Paypal and Binance</p>
+        </article>
+      </div>
+
+      </div>
+    </section>
+    <footer class="w-full h-auto bg-gray-50 p-6 pb-20 pb-28space-y-2" id="about-us">
+      <p class="text-lg text-gray-600">About Us</p>
+      <p class="text-sm text-gray-400">Investors</p>
+      <p class="text-sm text-gray-400">Jobs</p>
+      <p class="text-sm text-gray-400">Privacy policy</p>
+      <p class="text-sm text-gray-400">Terms and Conditions</p>
+      <p class="text-sm text-gray-400">Travel, inc</p>
+      <p class="text-sm text-gray-400">Follow Us </p>
+      <figure class="flex flex-row">
+        <img src="/public/assets/icons/twitter.svg" alt="">
+        <img src="/public/assets/icons/instagram.svg">
+      </figure>
+    </footer>
+  </main>
+  <section
+    class="w-full h-16  bg-white fixed left-0 bottom-0 shadow-md flex items-center justify-center space-x-7 lg:hidden dark:bg-gray-700"
+    id="tab_bar">
+    <a href="#home">
+      <img src="/public/assets/icons/home.png" alt="" class="Tab-bar--icon">
+    </a>
+    <a href="#outstanding">
+      <img class="Tab-bar--icon" src="/public/assets/icons/search.png" alt="">
+    </a>
+    <a href="#recommended">
+      <img class="Tab-bar--icon" src="/public/assets/icons/like.png" alt="">
+    </a>
+    <button id="toggle-sm">
+      <img class="Tab-bar--icon" src="/public/assets/icons/moon.png" alt="">
+    </button>
+    <a href="">
+      <img class="Tab-bar--icon" src="/public/assets/icons/user.png" alt="">
+    </a>
+  </section>
+  <script>
+    const htmlElement = document.querySelector("html");
+    const toggleButton = document.querySelector("#toggle");
+    const toggleButtonSm = document.querySelector("#toggle-sm");
+
+    const toggleDarkMode = () => {
+      htmlElement.classList.contains("dark") ?
+      htmlElement.classList.remove("dark") :
+      htmlElement.classList.add("dark")
+    }
+
+    toggleButton.addEventListener("click", toggleDarkMode)
+    toggleButtonSm.addEventListener("click", toggleDarkMode)
+  </script>
+</body>
+
+</html>
